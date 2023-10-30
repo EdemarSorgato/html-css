@@ -8,10 +8,9 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
-        
 
         table {
-            width: 400px;
+            width: 500px;
             border-collapse: collapse;
         }
 
@@ -21,7 +20,7 @@
         }
 
         thead, tfoot {
-            background-color: grey;
+            background-color: gray;
             color: white;
         }
 
@@ -29,7 +28,17 @@
             text-align: right;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
 
+        tbody > tr:nth-child(2n) {
+            background-color: rgba(128, 128, 128, 0.332);
+        }
+        
     </style>
 </head>
 <body>
@@ -39,13 +48,15 @@
     <table>
         <caption>População das Unidades Federativas</caption>
 
-        <thead>
-            <tr>
-                <th>Estado</th>
-                <th>População</th>
-             </tr>
-        </thead>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th>
+                    <th scope="col" style="width: 100px;">População</th>
+                </tr>
+            </thead>
             
+
         <tbody>
             <tr>
                 <td>São Paulo</td>
@@ -71,11 +82,27 @@
                 <td>Rio Grande do Sul</td>
                 <td class="num">11 377 239</td>
             </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 557 071</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 602 865</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 164 788</td>
+            </tr>
         </tbody>
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>210 147 125</strong></td>
             </tr>
         </tfoot>
